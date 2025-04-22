@@ -1,3 +1,3 @@
 <?php
 header("Content-Type: application/json");
-echo "API funcionando " . $_GET['name-project'];
+echo "API funcionando " . json_encode($_ENV);
