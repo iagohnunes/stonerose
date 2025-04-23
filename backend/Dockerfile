@@ -7,7 +7,8 @@ RUN a2enmod rewrite
 RUN printf "<Directory /var/www/html/>\n    AllowOverride All\n</Directory>\n" >> /etc/apache2/apache2.conf
 
 # Instala PDO e extensões (ajuste conforme necessário)
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_pgsql
+
 
 # Copia os arquivos do projeto
 COPY . /var/www/html/
