@@ -16,7 +16,7 @@ define('USER', 'root');
 define('PASSWORD', '');
 define('DATABASE', 'stonerose');
 
-if (file_exists('../autoload.php')) {
+if (file_exists('autoload.php')) {
     include 'autoload.php';
 } else {
     echo 'Error to include bootstrap';
