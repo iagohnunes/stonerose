@@ -19,10 +19,6 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         body: JSON.stringify(data)
     };
     fetch(`${endPoint}login`, options)
-        .then(response => {
-            console.log(response);
-            return response.json()
-        })
         .then(data => {
             console.log(data);
 
