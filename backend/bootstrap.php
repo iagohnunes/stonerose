@@ -10,12 +10,6 @@ define('DS', DIRECTORY_SEPARATOR);
 define('DIR_APP', __DIR__);
 define('DIR_PROJECT', 'api');
 
-//Define the database settings.
-define('HOSTNAME', 'localhost');
-define('USER', 'root');
-define('PASSWORD', '');
-define('DATABASE', 'stonerose');
-
 if (file_exists('autoload.php')) {
     include 'autoload.php';
 } else {
