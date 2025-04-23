@@ -16,9 +16,10 @@ use Validator\RequestValidator;
 include 'bootstrap.php';
 
 try {
+    $response = new ResponseUtil;
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
-    echo $RequestValidator->processRequest();
-    exit;
+    $response->sendResponse($RequestValidator->processRequest());
+    return $RequestValidator->processRequest();
 
 } catch (\Throwable $th) {
     echo $th->getMessage();
