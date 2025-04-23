@@ -36,7 +36,7 @@ class RequestValidator
     {
         $msg = utf8_encode(GenericConstantsUtil::ERROR_MSG_ROUTE_TYPE);
         if (in_array($this->method, GenericConstantsUtil::REQUEST_TYPE)) {
-            echo $this->routes->redirectRequest($this->method, $this->route, $this->id, JsonUtil::bodyRequest(), $this->service);
+            return $this->routes->redirectRequest($this->method, $this->route, $this->id, JsonUtil::bodyRequest(), $this->service);
         }
         return $msg;
     }

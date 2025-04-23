@@ -19,6 +19,7 @@ try {
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
     //return $RequestValidator->processRequest();
     echo $RequestValidator->processRequest();
+    return $RequestValidator->processRequest();
     exit;
 
 } catch (\Throwable $th) {
