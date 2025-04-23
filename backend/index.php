@@ -17,8 +17,8 @@ include 'bootstrap.php';
 
 try {
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
-    //return $RequestValidator->processRequest();
     echo $RequestValidator->processRequest();
+    print_r($RequestValidator->processRequest());
     return $RequestValidator->processRequest();
     exit;
 
