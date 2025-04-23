@@ -1,13 +1,13 @@
 FROM php:8.1-apache
 
-# Copia todos os arquivos do seu projeto pro container
-COPY . /var/www/html/
-
-# Permite URLs amig�veis (opcional)
+# Habilita mod_rewrite
 RUN a2enmod rewrite
 
+# Garante que .htaccess seja lido
+RUN printf "<Directory /var/www/html/>\n    AllowOverride All\n</Directory>\n" >> /etc/apache2/apache2.conf
+
+# Instala PDO e extensões (ajuste conforme necessário)
 RUN docker-php-ext-install pdo pdo_mysql
 
-RUN echo "<Directory /var/www/html/>
-    AllowOverride All
-</Directory>" >> /etc/apache2/apache2.conf
+# Copia os arquivos do projeto
+COPY . /var/www/html/
