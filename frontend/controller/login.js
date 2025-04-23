@@ -12,6 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     var options = {
         method: 'POST',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
