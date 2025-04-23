@@ -18,8 +18,6 @@ include 'bootstrap.php';
 try {
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
     echo $RequestValidator->processRequest();
-    print_r($RequestValidator->processRequest());
-    return $RequestValidator->processRequest();
     exit;
 
 } catch (\Throwable $th) {
