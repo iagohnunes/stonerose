@@ -2,7 +2,7 @@
 
 namespace Src\Factory;
 
-use DB\MySQL;
+use DB\Database;
 
 class LoginFactory
 {
@@ -10,7 +10,7 @@ class LoginFactory
 
     public function __construct()
     {
-        $this->connection = new MySQL;
+        $this->connection = new Database;
     }
 
     public function singIn($user)

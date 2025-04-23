@@ -2,7 +2,7 @@
 
 namespace Src\Factory;
 
-use DB\MySQL;
+use DB\Database;
 
 class EstimatesFactory
 {
@@ -10,7 +10,7 @@ class EstimatesFactory
 
     public function __construct()
     {
-        $this->connection = new MySQL;
+        $this->connection = new Database;
     }
 
     public function newEstimate($name, $last_Name, $address, $zip_code, $email = null, $contact = 0, $datetime, $status)

@@ -2,7 +2,7 @@
 
 namespace Src\Factory;
 
-use DB\MySQL;
+use DB\Database;
 
 class UsersFactory
 {
@@ -10,7 +10,7 @@ class UsersFactory
 
     public function __construct()
     {
-        $this->connection = new MySQL;
+        $this->connection = new Database;
     }
 
     public function getAllUsers()
