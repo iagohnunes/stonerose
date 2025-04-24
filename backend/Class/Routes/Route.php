@@ -45,7 +45,9 @@ class Route
 
         if ($method == 'POST') {
             if ($route == 'login') {
-                return $this->loginController->singIn();
+                $teste = $this->loginController->singIn();
+                error_log(json_encode($teste));
+                return $teste;
             }
             if ($route == 'users' && $service == null) {
                 return $this->usersController->createUser($params);
