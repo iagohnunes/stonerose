@@ -19,7 +19,7 @@ include 'bootstrap.php';
 try {
     $response = new ResponseUtil();
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
-    return $response->sendResponse($RequestValidator->processRequest());
+    $response->sendResponse($RequestValidator->processRequest());
     // return $RequestValidator->processRequest();
 
 } catch (\Throwable $th) {

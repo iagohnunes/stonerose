@@ -10,7 +10,7 @@ class ResponseUtil
             "dataSet" => $data
         );
         header('Content-Type: application/json');
-        
+        error_log(json_encode($response));
         echo json_encode($response); 
     }
 }
