@@ -33,6 +33,7 @@ class LoginController
             error_log(json_encode(JsonUtil::bodyRequest()));
             $data = $this->loginService->singIn(JsonUtil::bodyRequest());
             error_log(json_encode($data));
+            error_log("tESTE_______________");
             return $data;
         } catch (\Throwable $th) {
             $e = $th->getMessage();
