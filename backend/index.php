@@ -17,7 +17,7 @@ use Util\ResponseUtil;
 include 'bootstrap.php';
 
 try {
-    $response = new ResponseUtil;
+    $response = new ResponseUtil();
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
     $response->sendResponse($RequestValidator->processRequest());
     // return $RequestValidator->processRequest();

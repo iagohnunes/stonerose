@@ -29,7 +29,8 @@ class LoginController
     public function singIn()
     {
         try {
-            rerturn $this->loginService->singIn(JsonUtil::bodyRequest());
+            $data = $this->loginService->singIn(JsonUtil::bodyRequest());
+            return $data;
         } catch (\Throwable $th) {
             $e = $th->getMessage();
             return $this->response->sendResponse($this->messages->$e());
