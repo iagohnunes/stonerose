@@ -20,7 +20,7 @@ try {
     $response = new ResponseUtil;
     $RequestValidator = new RequestValidator(RoutesUtil::getRoutes());
     $response->sendResponse($RequestValidator->processRequest());
-    return $RequestValidator->processRequest();
+    // return $RequestValidator->processRequest();
 
 } catch (\Throwable $th) {
     echo $th->getMessage();

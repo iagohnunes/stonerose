@@ -11,6 +11,6 @@ class ResponseUtil
         );
         header('Content-Type: application/json');
         
-        echo json_encode($response); // ✅ só isso
+        echo json_encode($response); 
     }
 }
