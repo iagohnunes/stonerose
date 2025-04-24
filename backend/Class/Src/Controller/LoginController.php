@@ -29,7 +29,10 @@ class LoginController
     public function singIn()
     {
         try {
+            
+            error_log(json_encode(JsonUtil::bodyRequest()));
             $data = $this->loginService->singIn(JsonUtil::bodyRequest());
+            error_log(json_encode($data));
             return $data;
         } catch (\Throwable $th) {
             $e = $th->getMessage();
