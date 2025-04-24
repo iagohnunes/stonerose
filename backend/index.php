@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 use Util\RoutesUtil;
 use Validator\RequestValidator;
+use Util\ResponseUtil;
 
 include 'bootstrap.php';
 
